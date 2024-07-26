@@ -17,6 +17,7 @@ getWeatherData()
     // tempature
     const tempature = document.querySelector(".tempature");
     tempature.innerText = data.current.temperature_2m;
+
     // tempature unit
     const tempatureUnit = document.querySelector(".tempature-unit");
     tempatureUnit.innerText = data.current_units.temperature_2m;
@@ -29,7 +30,7 @@ getWeatherData()
     const windSpeedUnit = document.querySelector(".windspeed-unit");
     windSpeedUnit.innerText = data.current_units.wind_speed_10m;
 
-    // wind speed unit
+    // time zone
     const timezone = document.querySelector(".timezone");
     timezone.innerText = data.timezone;
 
@@ -40,6 +41,15 @@ getWeatherData()
 
     const time = document.querySelector(".time");
     time.innerText = formattedTime;
+
+    // background image
+    const wrapper = document.querySelector(".wrapper");
+    if (data.current.rain === 0) {
+      wrapper.style.backgroundImage = "url(./pexels-fotios-photos-2043035.jpg)";
+    } else {
+      wrapper.style.backgroundImage = "url(./pexels-hikaique-125510.jpg)";
+    }
+    wrapper.style.backgroundSize = "cover";
   })
   .catch((e) => {
     console.log(e);
