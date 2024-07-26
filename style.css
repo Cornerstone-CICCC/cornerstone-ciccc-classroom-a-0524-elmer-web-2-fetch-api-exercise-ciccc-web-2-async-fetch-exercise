@@ -1,0 +1,30 @@
+body {
+  font-size: 24px;
+}
+
+.wrapper {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+.wrapper h1 {
+  color: rgb(238, 216, 216);
+}
+.wrapper .tempature-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .windspeed-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .timezone-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.wrapper .time-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=style.css.map */
